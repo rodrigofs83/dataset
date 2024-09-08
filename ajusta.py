@@ -1,5 +1,5 @@
 import pandas as pd
-#from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 # Passo 1: Ler o arquivo CSV
 df = pd.read_csv('ionosphere_data.csv')
@@ -14,7 +14,7 @@ print(df)
 datasets = pd.read_csv('ionosphere_data.csv',header=None, skiprows=1)
 # Passo 2: Trocar as colunas de índice 0 e 10
 colunas = datasets.columns.tolist()  # Converter as colunas em uma lista
-colunas[0], colunas[34] = colunas[34], colunas[0]  # Trocar as colunas
+#colunas[0], colunas[34] = colunas[34], colunas[0]  # Trocar as colunas
 #label_encoder = LabelEncoder()
 #colunas[0] = label_encoder.fit_transform(colunas[0])
 # Reorganizar o dataframe com as colunas trocadas
@@ -30,4 +30,4 @@ print("\nDataFrame após a troca das colunas 0 e 10:")
 print(datasets)
 #print(datasets)
 # Passo 3: (Opcional) Salvar o dataframe modificado em um novo arquivo CSV
-df.to_csv('ionosphere_data1.csv', index=False)
+#df.to_csv('ionosphere_data1.csv', index=False)
